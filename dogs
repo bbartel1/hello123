@@ -1,0 +1,28 @@
+{
+"name": "coolnodeapp",
+"version": "1.0.0",
+"description": "node app ",
+"main": "app.js",
+"scripts": {
+"start": "node app.js"
+},
+"repository": {
+"type": "git",
+"url": ""
+},
+"author": "",
+"license": "ISC",
+"bugs": {
+"url": ""
+},
+"homepage": ""
+}const http = require('http');
+const port=process.env.PORT || 3000
+const server = http.createServer((req, res) => {
+res.statusCode = 200;
+res.setHeader('Content-Type', 'text/html');
+res.end('<h1>Hello World</h1>');
+});
+server.listen(port,() => {
+console.log(`Server running at port `+port);
+});
